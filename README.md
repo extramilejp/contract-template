@@ -11,4 +11,13 @@ If everything goes well, you will now have four binaries at your disposal: forge
 
 check out the [installation](https://github.com/foundry-rs/foundry#installation) instructions.
 
+### Build
+```shell
+forge build
+```
+
+### format
+```shell
+forge fmt
+```
 
