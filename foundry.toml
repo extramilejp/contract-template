@@ -1,0 +1,35 @@
+# Full reference https://github.com/foundry-rs/foundry/tree/master/config
+
+[etherscan]
+fuji = { key = "${SNOWTRACE_API_KEY}" }
+
+[fmt]
+bracket_spacing = false
+int_types = "long"
+line_length = 120
+multiline_func_header = "all"
+number_underscore = "thousands"
+quote_style = "single"
+tab_width = 2
+wrap_comments = true
+
+[profile.default]
+auto_detect_solc = false
+bytecode_hash = "none"
+fuzz = { runs = 1_000 }
+gas_reports = ["*"]
+libs = ["lib", "node_modules"]
+optimizer = true
+optimizer_runs = 10_000
+out = "out"
+solc = "0.8.17"
+src = "src"
+test = "test"
+
+[profile.ci]
+fuzz = { runs = 10_000 }
+verbosity = 4
+
+[rpc_endpoints]
+localhost="http://localhost:8545"
+fuji="https://avalanche-fuji.infura.io/v3/e751bf24100c4c70aa05a8eca282a5d1"
